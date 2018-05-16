@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background-color: #fafafa;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  margin-top: 30px;
+  grid-template-areas:
+    'columm card column'
+    'columm card2 column';  
+}
+
+.card {
+  padding: 20px;
+  grid-area: card;
+  border-radius: 6px;
+  /* border: 1px solid #ddd; */
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 45px;
+  width: 100%;
+  background-color: #6666ff;
+  border-radius: 4px;
+  color: #fff;
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: rgb(255, 255, 255);
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-rendering: auto;
+  padding-left: 10px;
+  /* this ensured the width is not changing after adding padding-left */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  /* background-color: #3CBC8D;  */
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.brand {
+  font-size: 14px;
+  margin-top: 10px;
+  grid-area: card2;
+  text-align: center;
+}
+
+.no-p-margin {
+  margin: 0px;
+}
+
