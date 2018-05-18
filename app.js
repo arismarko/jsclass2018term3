@@ -9,19 +9,19 @@ var span = document.getElementsByClassName("close-modal")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
-    modal.style.display = "block";
+  modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+  modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 // Reminder constructor
@@ -37,15 +37,44 @@ document.getElementById('btn').addEventListener('click', function(e) {
         reminderDate = document.getElementById('date').value,
         reminderPriority = document.getElementById('priority').value,
         reminderText = document.getElementById('text').value;
-  const itemHolder = document.getElementById('item-holder');
-        
-  // Create a Reminder
-  const newReminder = new Reminder(reminderTitle, reminderDate, reminderPriority, reminderText);
-  
+
+  // Item holder
+  const itemHolder = document.getElementById('item-holder'),
+        itemCard = document.createElement('div'),
+        title = document.createElement('h4'),
+        text = document.createElement('p'),
+        date = document.createElement('p'),
+        close = document.createElement('i'),
+        edit = document.createElement('i'),
+        priority = document.createElement('i');
+
+  // Actions
+  itemHolder.appendChild(itemCard);
+  itemCard.className = 'item card-item';
+
+  itemCard.appendChild(title);
+  title.innerHTML = reminderTitle;
+
+  itemCard.appendChild(close);
+  close.className = 'far fa-times-circle fa-sm close';
+
+  itemCard.appendChild(edit);
+  edit.className = 'far fa-edit fa-sm edit';
+
+  itemCard.appendChild(priority);
+  priority.className = 'far fa-flag fa-sm priority';
+
+  itemCard.appendChild(date);
+  date.className = 'no-p-margin date';
+  date.innerHTML = reminderDate;
+
+  itemCard.appendChild(text);
+  text.innerHTML = reminderText;
+       
   // Remove modal
   modal.style.display = "none";
   // Make item appear
-  itemHolder.style.display = "block";
+  // itemHolder.style.display = "block";
 
   e.preventDefault();
 
