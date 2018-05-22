@@ -70,6 +70,12 @@ document.getElementById('btn').addEventListener('click', function(e) {
 
   itemCard.appendChild(text);
   text.innerHTML = reminderText;
+
+  // Close
+  document.getElementById('close').addEventListener('click', function() {
+    itemHolder.removeChild(itemCard);
+    console.log('clicked');
+  });
        
   // Remove modal window
   modal.style.display = "none";
