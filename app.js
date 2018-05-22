@@ -71,7 +71,7 @@ document.getElementById('btn').addEventListener('click', function(e) {
   itemCard.appendChild(text);
   text.innerHTML = reminderText;
        
-  // Remove modal
+  // Remove modal window
   modal.style.display = "none";
   // Make item appear
   // itemHolder.style.display = "block";
