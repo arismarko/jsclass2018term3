@@ -1,27 +1,34 @@
 body {
   margin: 0;
-  background-color: #fafafa;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background: #f85032;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+
+
 
 .container {
   display: grid;
   grid-auto-columns: 0.5fr, 1fr, 0.5fr; 
   grid-auto-rows: 1fr, 100px; 
-  margin-top: 30px;
+  margin-top: 5%;
   grid-template-areas:
-    'columm card column'
+    'columm card icons'
     'columm card2 column';  
 }
 
 .card {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   grid-area: card;
   border-radius: 6px;
   /* border: 1px solid #ddd; */
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 0px 2px 47px -7px rgba(0,0,0,0.71);
+  -moz-box-shadow: 0px 2px 47px -7px rgba(0,0,0,0.71);
+  box-shadow: 0px 2px 47px -7px rgba(0,0,0,0.71);
 }
 
 .btn {
@@ -69,10 +76,18 @@ p {
 }
 
 .brand {
-  font-size: 14px;
-  margin-top: 10px;
   grid-area: card2;
+  font-size: 14px;
   text-align: center;
+  margin-top: 10px;
+}
+
+.fa-github {
+  color: #fff;
+}
+
+.fa-twitter {
+  margin-top: 10px;
 }
 
 .no-p-margin {
@@ -81,7 +96,7 @@ p {
 
 .item-holder {
   margin: 0px 0px 20px 0px;
-  display: none;
+  
 }
 
 .main-title {
@@ -93,18 +108,22 @@ p {
 .close {
   float: right;
   margin-left: 10px;
+  font-size: 20px;
 }
 
 .edit {
   float: right;
-  margin-left: 10px;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 .priority {
   float: right;
+  font-size: 20px;
 }
 
 .card-item {
+  margin-top: 10px;
   padding: 20px;
   grid-area: card;
   border-radius: 6px;
@@ -152,6 +171,10 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    background: #fafafa;
+  }
+
   .container {
     display: grid;
     grid-auto-columns: 1fr; 
@@ -161,32 +184,51 @@ hr {
       'card'
       'card2';  
   }
+
+  .fa-github {
+    color: #4a4f62;
+  }
+
   .card {
-    margin-right: 20px;
-    margin-left: 20px;
+    padding: 20px 20px 0px 20px;
+    grid-area: card;
+    /* border: 1px solid #ddd; */
+    background-color: #fafafa;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.12), 0 0px 0px rgba(0,0,0,0.24);
   }
 
   /* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
+  .modal-content {
+    background-color: #eee;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    padding: 20px;
+  }
+  .brand {
+    grid-area: card2;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .fa-twitter {
+    margin-top: 0px;
+  }
 }
 
-@media (max-width: 1200px) and (min-width: 600px) {
+@media (max-width: 1000px) and (min-width: 600px) {
   .container {
     display: grid;
     grid-auto-columns: 1fr; 
     grid-auto-rows: 1fr; 
-    margin-top: 30px;
+    margin-top: 5%;
     grid-template-areas:
       'card'
       'card2';  
   }
   .card {
+    padding: 20px 20px 0px 20px;
     margin-right: 100px;
     margin-left: 100px;
   }
@@ -196,6 +238,15 @@ hr {
   margin: auto;
   width: 50%;
 }
+
+.brand {
+  grid-area: card2;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
 }
 
 /* The Modal (background) */
