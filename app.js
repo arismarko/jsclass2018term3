@@ -11,7 +11,7 @@ function loadEventListeners() {
 }
 
 function addTask(e) {
-   if(taskInput.value || dateInput === '') {
+   if(taskInput.value && dateInput === '') {
      alert('Add a task');
    }
 
@@ -30,8 +30,8 @@ function addTask(e) {
    taskList.appendChild(li);
 
 
- taskInput.value = '';
- dateInput.value = '';
+// taskInput.value = '';
+// dateInput.value = '';
 
 
   e.preventDefault();
