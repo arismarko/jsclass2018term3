@@ -11,7 +11,7 @@ function loadEventListeners() {
 }
 
 function addTask(e) {
-   if(taskInput.value && dateInput === '') {
+   if(taskInput.value || dateInput === '') {
      alert('Add a task');
    }
 
