@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Joe's Reminder App</title>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <h1>Joe's Reminder App</h1>
+    </header>
+
+    <div class="toDo-container">
+
+        <h2>Date Added</h2>
+        <ul class="toDo-dateAdded">
+        </ul>
+
+        <h2>To Do</h2>
+        <ul class="toDo-item">
+        </ul>
+
+        <h2>Complete by</h2>
+        <ul class="toDo-completeBy">
+        </ul>
+
+        <h2>Edit</h2>
+        <ul class="toDo-edit">
+        </ul>
+
+        <h2>Catagory</h2>
+        <ul class="toDo-catagory">
+        </ul>
+
+        <h2>Complete</h2>
+        <ul class="toDo-complete">
+        </ul>
+    </div>
+
+    <div class="newEntryForm">
+        <form id="form">
+            Task
+            <input class="taskFormEntry" type="Text" name="task">
+            Complete by
+            <input class="completedDateFormEntry" type="date" name="CompletedDate">
+            <select class="catagoryFormEntry" name="catagory">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="test">Test</option>
+            </select>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+</div>
+</body>
+
+</html>
