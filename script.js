@@ -1,33 +1,30 @@
-const fieldClassList = ["taskFormEntry","completedDateFormEntry","catagoryFormEntry"]
-const listClassList = ["toDo-item","toDo-completeBy","toDo-catagory"]
-const form = document.getElementById('submit');
+const fieldClassList = ["taskFormEntry","completedDateFormEntry","categoryFormEntry"];
+const listClassList = ["toDo-item","toDo-completeBy","toDo-category"];
+const form = document.getElementById('form');
 
 // get values from form
-let getFormEntry = field => {
-    let fieldValue = document.getElementsByClassName(field).value
-    console.log(fieldValue);
-    
-    return fieldValue;
-}
+getFormEntry = field => {
+    let fieldValue = document.getElementById(field);
+    return fieldValue.value;
+};
 
-// function to appened to list
-let appendFormEntryToList = (field, listClassName) => {
-    let fieldValue = getFormEntry(field);
-    let listToAppend = document.getElementsByClassName("listClassName")
+// function to append to list
+appendFormEntryToList = (field, listClassName) => {
     let newLIElement = document.createElement("li");
-    newLIElement.appendChild(document.createTextNode(fieldValue));
-    listToAppend.appendChild(newLIElement);
+    let listItemValue = document.createTextNode(getFormEntry(field));
+    newLIElement.appendChild(listItemValue);
+    document.getElementById(listClassName).appendChild(newLIElement);
+};
 
-}
-
-// Add form enteries after submit
+// Add form entries after submit
 form.addEventListener("submit", (event) => {
-    "use strict";
-    event.preventDefault();
+
     // add task to document
-    appendFormEntryToList(fieldClassList[0], listClassList[0])()
+    appendFormEntryToList(fieldClassList[0], listClassList[0]);
     // add completed by date to document
-    appendFormEntryToList(fieldClassList[1], listClassList[1])()
-    // add catagory to document
-    appendFormEntryToList(fieldClassList[2], listClassList[2])()
-})  
+    appendFormEntryToList(fieldClassList[1], listClassList[1]);
+    // add category to document
+    appendFormEntryToList(fieldClassList[2], listClassList[2]);
+
+    event.preventDefault();
+});
