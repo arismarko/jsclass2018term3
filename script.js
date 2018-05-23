@@ -1,5 +1,5 @@
-const fieldClassList = ["taskFormEntry","completedDateFormEntry","categoryFormEntry"];
-const listClassList = ["toDo-item","toDo-completeBy","toDo-category"];
+const fieldIDs = ["taskFormEntry","completedDateFormEntry","categoryFormEntry"];
+const listIDs = ["toDo-item","toDo-completeBy","toDo-category"];
 const form = document.getElementById('form');
 
 // get values from form
@@ -20,11 +20,11 @@ appendFormEntryToList = (field, listClassName) => {
 form.addEventListener("submit", (event) => {
 
     // add task to document
-    appendFormEntryToList(fieldClassList[0], listClassList[0]);
+    appendFormEntryToList(fieldIDs[0], listIDs[0]);
     // add completed by date to document
-    appendFormEntryToList(fieldClassList[1], listClassList[1]);
+    appendFormEntryToList(fieldIDs[1], listIDs[1]);
     // add category to document
-    appendFormEntryToList(fieldClassList[2], listClassList[2]);
+    appendFormEntryToList(fieldIDs[2], listIDs[2]);
 
     event.preventDefault();
 });
