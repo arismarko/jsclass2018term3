@@ -1,5 +1,23 @@
-/*body*/
-/*{*/
-    /*background-color: coral;*/
-/*}*/
+@charset "UTF-8";
 
+body
+{
+  background: #edf0f1;
+  padding: 80px 0 0 0;
+}
+
+body, input, button
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+ul
+{
+    list-style-type: none;
+
+}
+
+/*.listRowContainer*/
+/*{*/
+    /*float: left;*/
+/*}*/
