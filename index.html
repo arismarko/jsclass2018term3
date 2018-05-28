@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsclass2018term3 - Todo - JS APP - HSaid(acyy137)</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">ToDo JS App</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <p class="navbar-text">Single page JS app to store tasks and reminders.</p>
+            <!--<p class="navbar-text navbar-right"><a href="#" class="navbar-link"><strong>Settings</strong></a></p>-->
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<section class="container-wrapper table-records">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>List Items</h4>
+                <!--<p></p>-->
+                <div class="table-responsive">
+                    <table id="tablelist" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Priority</th>
+                            <th>Task/Reminder</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--<tr>-->
+                        <!--<td>1</td>-->
+                        <!--<td>Must do this...</td>-->
+                        <!--<td>28/05/2018</td>-->
+                        <!--<td><a href="#">Edit</a> / <a href="#">Delete</a></td>-->
+                        <!--</tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="container-wrapper form-record">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Form Item</h4>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div id="alerterror" class="alert alert-danger" role="alert" style="display: none;"> <strong>Item Error!</strong> Unable to save record, invalid/missing content. <button id="dismissbtn" type="button" class="close dismiss-alert" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="select1" class="col-sm-2 control-label">Priority</label>
+                        <div class="col-sm-10">
+                            <select id="select1" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input1" class="col-sm-2 control-label">Task/Reminder</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input1" placeholder="Task/Reminder...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input2" class="col-sm-2 control-label">Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="input2" placeholder="dd/mm/YYYY">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button id="savebtn" class="btn btn-default btn-primary save-item">Save</button>
+                            <button id="updatebtn" class="btn btn-default btn-success update-item" style="display: none;">Update</button>
+                            <button id="cancelbtn" class="btn btn-default update-item">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="todo-app-v1.js" type="text/javascript"></script>
+</body>
+</html>
