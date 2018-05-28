@@ -9,6 +9,7 @@ An exercise for my class
 <li>Add Task/Reminder item to list.</li>
 <li>Edit Task/Reminder item, and update to list</li>
 <li>Delete Task/Reminder item from list</li>
+<li>List is sorted to display in order of priority.</li>
 <li>List is stored within browser as a cookie - to prevent list from being emptied on browser page refresh.</li>
 </ul>
 
