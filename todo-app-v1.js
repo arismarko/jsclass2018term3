@@ -3,6 +3,7 @@
 //Global Variables
 var todoList;
 var foundItem;
+var defaultLocale = "en-GB";
 //alerts elements
 var alertSave = document.getElementById('alertsave');
 var alertDelete = document.getElementById('alertdelete');
@@ -26,7 +27,7 @@ var input2 = document.getElementById('input2');
 //Todo Prototype
 var Todo = {
     taskId: function () {
-        var x = new Date().toLocaleDateString().replace('/','').replace('/','');
+        var x = new Date().toLocaleDateString(defaultLocale).replace('/','').replace('/','');
         var t = new Date().getTime().toString();
         this.timeStamp = x + t;
     },
@@ -172,14 +173,14 @@ Todo.todoList.prototype.updateTable = function (onload) {
     if(onload == true){
         if (Todo.getCookieforListArray('tasks') != '') {
             var pastItems = Todo.getCookieforListArray('tasks');
-            var pastItemsArray = JSON.parse(pastItems)
+            var pastItemsArray = JSON.parse(pastItems);
             pastItemsArray.forEach(function (item) {
                 self.listArray.push(item);
             });
         }
     }
 
-    console.log(this.listArray);
+    //console.log(this.listArray);
     var listArray = this.listArray;
     var sortedListArray = listArray.sort(function (a, b) {
         return a['priority'] - b['priority'];
@@ -189,7 +190,7 @@ Todo.todoList.prototype.updateTable = function (onload) {
         var dateItem = new Date(data['date'].toString());
         return "<tr><td>" + data['priority'] + "</td>" +
             "<td>" + data['task'] + "</td>" +
-            "<td>" + dateItem.toLocaleDateString('en-GB') + "</td>" +
+            "<td>" + dateItem.toLocaleDateString(defaultLocale) + "</td>" +
             "<td><a href='#' class='edit-btn' data-id=" + data['id'] + " >Edit</a> / <a href='#' class='delete-btn' data-id=" + data['id'] + " >Delete</a></td></tr>";
     });
     tableList.innerHTML = tableRow.join(' ');
@@ -200,8 +201,11 @@ Todo.todoList.prototype.updateTable = function (onload) {
     Todo.editBtnQuery();
     //update table row query selector
     Todo.tableRowQuery();
+
     Todo.toggleSaveBtn(1);
     Todo.toggleUpdateBtn(0);
+
+    Todo.emptyForm();
 
     //set cookie to store list after browser page refresh
     Todo.setCookieforListArray('tasks', JSON.stringify(sortedListArray), 1);//store cookie for 1 day
