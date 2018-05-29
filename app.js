@@ -57,6 +57,9 @@ document.getElementById('btn').addEventListener('click', function(e) {
 
   itemCard.appendChild(close);
   close.className = 'far fa-times-circle fa-sm close';
+  close.addEventListener('click', function(event) {
+    event.target.parentElement.remove();
+  });
 
   itemCard.appendChild(edit);
   edit.className = 'far fa-edit fa-sm edit';
@@ -70,6 +73,8 @@ document.getElementById('btn').addEventListener('click', function(e) {
 
   itemCard.appendChild(text);
   text.innerHTML = reminderText;
+
+ 
        
   // Remove modal window
   modal.style.display = "none";
