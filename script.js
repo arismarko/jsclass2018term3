@@ -1,6 +1,7 @@
 const fieldIDs = ["taskFormEntry", "completedDateFormEntry", "categoryFormEntry"];
 const idsOfListsToPopulate = ["toDo-item", "toDo-completeBy", "toDo-category"];
-const idOfAllLists = ['toDo-dateAdded', 'toDo-item', 'toDo-completeBy', 'toDo-category', 'toDo-complete']
+const idOfAllLists = ['toDo-dateAdded', 'toDo-item', 'toDo-completeBy',
+                      'toDo-category', 'toDo-complete'];
 const form = document.getElementById('form');
 
 let idIncrementor = 1;
@@ -14,7 +15,7 @@ getFormEntry = field => {
     return fieldValue.value;
 };
 
-// add ne list element with form input
+// add new list element with form input
 appendFormEntryToList = (field, listIDName) => {
     let newLIElement = document.createElement("li");
     let listItemValue = document.createTextNode(getFormEntry(field));
@@ -52,13 +53,13 @@ setNumberFromElementId = () => {
 };
 
 removeListItem = (elementId) => {
-    let uniqueElementId = elementId + numberFromElementId
+    let uniqueElementId = elementId + numberFromElementId;
     let element = document.getElementById(uniqueElementId);
     element.parentNode.removeChild(element);
 };
 
 removeAllListItems = () => {
-    setNumberFromElementId()
+    setNumberFromElementId();
     idOfAllLists.forEach(function (id) {
         removeListItem(id)
     });
