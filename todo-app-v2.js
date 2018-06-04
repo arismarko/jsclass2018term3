@@ -1,4 +1,4 @@
-//****ToDo app JS v1****
+//****ToDo app JS v2****
 //First Iteration of refactoring
 
 //Module
