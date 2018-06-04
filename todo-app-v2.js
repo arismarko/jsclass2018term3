@@ -24,7 +24,7 @@ var ToDoApp = (function () {
     var input1 = document.getElementById('input1');
     var input2 = document.getElementById('input2');
 
-    //Private Function
+    //Private Functions
     init = function () {
         //init new object array
         todoList = new todoListObj();
@@ -168,7 +168,7 @@ var ToDoApp = (function () {
         return "";
     };
 
-    //Prototype functions for todoListObj
+    //Private prototype functions for todoListObj
     todoListObj.prototype.addItem = function (objItem) {
         this.listArray.push(objItem);
         return this;
