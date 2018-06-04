@@ -19,7 +19,7 @@ An exercise for my class
 <li>List is stored within browser as a cookie - to prevent list from being emptied on browser page refresh.<br/>
 (Cookie storage requires a web server - local or remote.)
 <ul>
-<li><a href="https://weblogs.asp.net/lduveau/visual-studio-code-and-local-web-server" target="_blank">Visual Studio Code and local web server(Using Node JS)</a></li>
+<li><a href="https://weblogs.asp.net/lduveau/visual-studio-code-and-local-web-server" target="_blank">Visual Studio Code and local web server (Using Node JS)</a></li>
 <li>For savvy users of Node JS - <a href="https://www.npmjs.com/package/http-server" target="_blank">You can install http-server NPM module.</a></li>
 </ul>
 </li>
