@@ -16,7 +16,7 @@ An exercise for my class
 <li>Edit Task/Reminder item, and update to list</li>
 <li>Delete Task/Reminder item from list</li>
 <li>List is sorted to display in order of priority.</li>
-<li>List is stored within browser as a cookie - to prevent list from being emptied on browser page refresh.
+<li>List is stored within browser as a cookie - to prevent list from being emptied on browser page refresh.<br/>
 (Cookie storage requires a web server - local or remote.)
 <ul>
 <li><a href="https://weblogs.asp.net/lduveau/visual-studio-code-and-local-web-server" target="_blank">Visual Studio Code and local web server(Using Node JS)</a></li>
