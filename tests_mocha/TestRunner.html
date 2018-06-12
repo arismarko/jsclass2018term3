@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        .container {
+            display: none
+        }
+    </style>
+    <link rel="stylesheet" href="./node_modules/mocha/mocha.css">
+    <title>Joe's Reminder App - tests</title>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <h1>Joe's Reminder App</h1>
+    </header>
+
+    <div class="newEntryForm">
+        <form id="form">
+            Task
+            <input id="taskFormEntry" type="Text" name="task">
+            Complete by
+            <input id="completedDateFormEntry" type="date" name="CompletedDate">
+            <select id="categoryFormEntry" name="category">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="test">Test</option>
+            </select>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="toDo-container" class="toDoContainer-Flex">
+        <div class="listColumnContainerDateAdded">
+            <h2>Date Added</h2>
+            <ul id="toDo-dateAdded">
+            </ul>
+        </div>
+
+        <div class="listColumnContainerToDo">
+            <h2>To Do</h2>
+            <ul id="toDo-item">
+            </ul>
+        </div>
+
+        <div class="listColumnContainerCompleteBy">
+            <h2>Complete by</h2>
+            <ul id="toDo-completeBy">
+            </ul>
+        </div>
+
+        <div class="listColumnContainerCategory">
+            <h2>Category</h2>
+            <ul id="toDo-category">
+            </ul>
+        </div>
+
+        <div class="listColumnContainerComplete">
+            <h2>Complete</h2>
+            <ul id="toDo-complete">
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<script src="../script2.js"></script>
+<div id="mocha"></div>
+<script src="./node_modules/mocha/mocha.js"></script>
+<script src="./node_modules/chai/chai.js"></script>
+<script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    var expect = chai.expect;
+</script>
+<script src="./spec.js"></script>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>

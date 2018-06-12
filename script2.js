@@ -1,10 +1,10 @@
 const form = document.getElementById('form');
 
-const dateAdded = {formID: '', listID: 'toDo-dateAdded', elementType: 'li'};
-const todo = {formID: 'taskFormEntry', listID: 'toDo-item', elementType: 'li'};
-const completeBy = {formID: 'completedDateFormEntry', listID: 'toDo-completeBy', elementType: 'li'};
-const catagory = {formID: 'categoryFormEntry', listID: 'toDo-category', elementType: 'li'};
-const btn = {formID: '', listID: 'toDo-complete', elementType: 'li'};
+const dateAdded = {formID: '', listID: 'toDo-dateAdded', elementType: 'li'}
+const todo = {formID: 'taskFormEntry', listID: 'toDo-item', elementType: 'li'}
+const completeBy = {formID: 'completedDateFormEntry', listID: 'toDo-completeBy', elementType: 'li'}
+const catagory = {formID: 'categoryFormEntry', listID: 'toDo-category', elementType: 'li'}
+const btn = {formID: '', listID: 'toDo-complete', elementType: 'li'}
 
 let FormActions = (function () {
 
@@ -15,7 +15,7 @@ let FormActions = (function () {
     let setConfig, addFromEntry, addDate, showremoveClassName, showIncrementer,
         addButton, removeElements, setIncrementer, upDateClassName;
 
-    // Set HTML class name for each li element following form submit
+    // Set class name for each li element following form submit
     removeClassName = 'removeTag';
 
     config = {
@@ -94,7 +94,9 @@ let FormActions = (function () {
     };
 
     removeElements = function () {
-        let elements = document.getElementsByClassName(removeClassName);
+        let className = event.target.className;
+        // let className = target.getElementsByClassName;
+        let elements = document.getElementsByClassName(className);
         while (elements.length > 0) {
             elements[0].parentNode.removeChild(elements[0]);
         }
@@ -110,8 +112,7 @@ let FormActions = (function () {
         addFromEntry: addFromEntry,
         addDate: addDate,
         addButton: addButton,
-        upDateClassName: upDateClassName
-
+        upDateClassName: upDateClassName,
 }
 
 })();
