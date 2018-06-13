@@ -69,7 +69,18 @@ describe('DOM tests', function () {
     });
 
     describe('check items have been removed', function () {
+
+        let removeItem = function () {
+
+            let evt = new MouseEvent('click');
+
+            let elem = document.getElementById('toDo-complete').children[0];
+
+            elem.dispatchEvent(evt);
+        };
+
         it('should check form entries are deleted')
     })
 });
 
+    
